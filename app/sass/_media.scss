@@ -1,0 +1,11 @@
+@import "index/index";
+
+@media screen and (max-width: 1200px) {
+    @import "index/index-max-1200";
+}
+@media screen and (max-width: 992px) {
+    @import "index/index-max-992";
+}
+@media screen and (max-width: 767px) {
+    @import "index/index-max-767";
+}

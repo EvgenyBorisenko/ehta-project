@@ -1,0 +1,41 @@
+extends ../default.pug
+block pageContent
+	include ../templates/header.pug
+	.container
+		section.home-slider__box
+			.owl-carousel.home-slider
+				.home-slider__item
+					.home-slider__item-left
+						img(src="img/ehta-model0.png", alt="")
+					.home-slider__item-right
+						h2 Bertta Tunika
+						p 3/4-hiha, Baroque Flowers vol 2, ruska
+						a(href="")
+		section.home-direction__box
+			.home-direction__items
+				.home-direction__item VAATTEET »
+				.home-direction__item KOTI »
+				.home-direction__item KANKAAT »
+		section.home-subscribe__box
+			.home-subscribe__items
+				.home-subscribe__item-left
+					p Olemme kaksi siskoa syvältä Savosta ja Dream Circus Oy on meidän unelmamme. Me puhumme unelmien ja haaveiden puolesta, uskomme yksisarvisiin ja taistelemme tylsyyttä vastaan. Me pukeudumme useimmiten mustaan, mutta rakastamme kaikkia maailman värejä. Me haluamme saada sinutkin uskomaan unelmiisi ja tavoittelemaan niitä jokaisena päivänä.
+						span “
+					a(href="javascript:void(0);") Lue lisää
+				.home-subscribe__item-right
+					img(src="img/ehta-subscribe.png", alt="")
+		section.home-subscribe__box.home-twosubscribe__box
+			.home-subscribe__items.home-twosubscribe__items
+				.home-subscribe__item-left
+					.home-twosubscribe__item-leftbox
+						p.home-twosubscribe__title Tilaa uutiskirjeemme
+						.home-twosubscribe-find__box
+							input(type="text" placeholder="Sähköpostiosoitteesi")
+							input(type="submit" value="Tilaa")
+						p.home-twosubscribe__info Tilaa Dream Circuksen uutiskirje! Saat sähköpostilla tietoa tulevista uusista tuotteistamme ja muista ajankohtaisista asioista. #[br]#[br]Hyväksymällä suostut käyttöehtoihimme. Lue käyttöehdot #[a(class="home-twosubscribe__info-link" href="javascript:void(0);") tästä].
+				.home-subscribe__item-right
+					.home-twosubscribe__around
+						include ../../img/logo-white.svg
+						p.home-twosubscribe__around-title Unelmageneraattor
+						p.home-twosubscribe__around-subtitle Lorem ipsum dolor sit amet, consectetur.
+						a.home-twosubscribe__around-link(href="javascript:void(0);") Lue lisää

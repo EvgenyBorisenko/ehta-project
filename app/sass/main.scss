@@ -1,0 +1,14 @@
+@import "variables-functions-and-mixins";
+
+*, *::before, *::after {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+@import "media";
+@import "fonts";
