@@ -624,6 +624,7 @@ button {
   flex-flow: row wrap;
 }
 .round__button {
+  position: relative;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -631,6 +632,12 @@ button {
 }
 .round__button:hover {
   cursor: pointer;
+  /* position: absolute;
+  background-image: url('../img/check_icon@1X.png');
+  background-repeat: no-repeat;
+  display: block;
+  width: 20px;
+  height: 20px; */
 }
 .nav__wrapper h4 {
   text-transform: uppercase;
@@ -696,11 +703,69 @@ button {
 }
 .constructor__box__checkbox label {
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+/* ----------- range-input ------------ */
+.price__box {
+  padding-top: 25px;
+}
+.rs-tooltip {
+  border: none !important;
+  background-color: transparent !important;
+}
+.rs-pointer {
+  border-radius: 50% !important;
+  width: 20px !important;
+}
+.rs-container .rs-selected {
+  background-color: #ca0f0f !important;
+  border: 1px solid #ca0f0f !important;
+}
+.rs-container .rs-scale span ins {
+  opacity: 0 !important;
+}
+input[type='radio'] {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ca0f0f;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
 /* ----------- vaatteet__article ------------ */
 .vaatteet__article {
   width: 1045px;
+}
+.vaatteet__article .bread__crumbs__box {
+  margin-bottom: 30px;
 }
 .vaatteet__text__box {
   display: flex;
@@ -749,13 +814,11 @@ button {
   cursor: pointer;
   display: block;
   opacity: 1;
-  height: auto;
 }
 .category__item {
-  transition: opacity 2s;
+  display: none;
   opacity: 0;
   padding-left: 10px;
-  height: 0px;
   font-weight: 400;
 }
 .category__item:hover a {
@@ -898,6 +961,9 @@ button {
   font-size: 14px;
   font-weight: 400;
   font-style: italic;
+}
+.ajankohtaista__text__box .bread__crumbs__box {
+  margin-bottom: 50px;
 }
 .quote__box {
   width: 100%;

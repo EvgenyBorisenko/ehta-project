@@ -2,6 +2,17 @@ $('.home-slider').owlCarousel({
   items: 1,
 });
 
+var slider = new rSlider({
+  target: '#slider3',
+  values: { min: 0, max: 200 },
+  step: 1,
+  range: true,
+  set: [0, 85],
+  scale: true,
+  labels: false,
+  onChange: function(vals) {},
+});
+
 // -----------open/close  modal-------------
 
 let modal = document.querySelector('.shadow__box__modal');
